@@ -1,0 +1,50 @@
+@import "tailwindcss";
+@custom-variant hover (&:where(:hover));
+@theme {
+  /* Primary */
+  --color-Green-500: #26baa4;
+  --color-Blue-100: #6173ff;
+  /* Neutral */
+  --color-Gray-700: #4c545d;
+  --color-gray-500: #9fabb6;
+  /* breakponits */
+  --breakpoint-md: 768px;
+}
+@layer base {
+  html {
+    font-size: 62.5%;
+  }
+  body {
+    font-size: 1.8rem;
+    font-family: "Bai Jamjuree", sans-serif;
+  }
+}
+@layer components {
+  .container {
+    padding-inline: 2rem;
+  }
+}
+.s-3 {
+  .part-1 {
+    & > * {
+      flex: 1;
+      img {
+        @apply mx-auto;
+      }
+      h3 {
+        @apply text-5xl text-gray-700 font-bold text-center;
+      }
+      p {
+        @apply text-gray-500 leading-[2] text-center;
+      }
+    }
+  }
+}
+.foot-social {
+  & > * {
+    @apply font-[500] text-gray-500;
+    &:hover {
+      @apply text-gray-500/50;
+    }
+  }
+}
