@@ -1,5 +1,11 @@
 @import "tailwindcss";
 @custom-variant hover (&:where(:hover));
+@utility isize-* {
+  inline-size: calc(var(--spacing) * var(--value));
+}
+@utility isize-* {
+  inline-size: fragment();
+}
 @theme {
   /* Primary */
   --color-Green-500: #26baa4;
@@ -24,6 +30,7 @@
     padding-inline: 2rem;
   }
 }
+
 .s-3 {
   .part-1 {
     & > * {
